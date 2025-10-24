@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/rounded_white_background"
+        android:layout_margin="16dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/deepPurple"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <RatingBar
+            android:id="@+id/rb_rating"
+            style="@style/Widget.AppCompat.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="@color/yellow_500" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Address"
+            android:textColor="@color/textSecondary"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_location_pin"
+            app:drawableTint="@color/deepPurple"
+            android:drawablePadding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Phone"
+            android:textColor="@color/textSecondary"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_phone"
+            app:drawableTint="@color/deepPurple"
+            android:drawablePadding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginBottom="32dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Description"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Tags:"
+            android:textColor="@color/deepPurple"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_tags"
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:layout_marginBottom="32dp"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp" />
+
+        <Button
+            android:id="@+id/btn_view_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/deepPurple"
+            android:padding="14dp"
+            android:text="View on Map"
+            android:textColor="#FFFFFF"
+            app:icon="@android:drawable/ic_menu_compass"
+            app:iconTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/deepPurple"
+            android:padding="14dp"
+            android:text="Share"
+            android:textColor="#FFFFFF"
+            app:icon="@android:drawable/ic_menu_share"
+            app:iconTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Restaurant"
+            android:backgroundTint="@color/yellow_500"
+            android:textColor="#FFFFFF"
+            android:padding="14dp" />
+
+    </LinearLayout>
+</ScrollView>
