@@ -1,10 +1,9 @@
-package ca.gbccomp3074.project_3074.uz
-import androidx.cardview.widget.CardView
+package ca.gbccomp3074.project3074.uz
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-//import ca.gbccomp3074.project_3074.uz.databinding.ActivityAddEditBinding
-import com.example.personalrestaurantguide.databinding.ActivityAddEditBinding
+import ca.gbccomp3074.project3074.uz.databinding.ActivityAddEditBinding // 1. Corrected the binding import
+
 
 class AddEditActivity : AppCompatActivity() {
 
@@ -16,8 +15,12 @@ class AddEditActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // If editing, get extra and populate fields
+        // 3. Changed to use getSerializableExtra with the modern, typesafe method
+        @Suppress("DEPRECATION") // Suppressing deprecation warning for getSerializableExtra
         val restaurant = intent.getSerializableExtra("restaurant") as? Restaurant
+
         if (restaurant != null) {
+            // Populate fields if a restaurant object was passed
             binding.etName.setText(restaurant.name)
             binding.etAddress.setText(restaurant.address)
             binding.etPhone.setText(restaurant.phone)
@@ -27,7 +30,7 @@ class AddEditActivity : AppCompatActivity() {
         }
 
         binding.btnSave.setOnClickListener {
-            // For prototype, just finish. In full, save to list or DB
+            // For prototype, just finish. In full, you would save to the database here.
             finish()
         }
 

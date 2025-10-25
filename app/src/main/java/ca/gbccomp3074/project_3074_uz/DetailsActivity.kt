@@ -1,4 +1,5 @@
-package ca.gbccomp3074.project_3074_uz
+package ca.gbccomp3074.project3074.uz
 
 class DetailsActivity {
+
 }

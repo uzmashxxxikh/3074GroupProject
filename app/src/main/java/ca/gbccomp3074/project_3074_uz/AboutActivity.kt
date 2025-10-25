@@ -1,4 +1,4 @@
-package ca.gbccomp3074.project_3074.uz
+package ca.gbccomp3074.project3074.uz
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import ca.gbccomp3074.project_3074.uz.Restaurant  // <-- Ensure this import is correct
 //import ca.gbccomp3074.project3074.uz.databinding.ActivityMainBinding
-import com.example.personalrestaurantguide.databinding.ActivityMainBinding
+// Correct import
+import ca.gbccomp3074.project3074.uz.databinding.ActivityMainBinding
+import ca.gbccomp3074.project_3074_uz.RestaurantAdapter
 
-// Note: You must also have a file named 'RestaurantAdapter.kt' defined.
+// Note: You must also have a file named
 // Note: You must also have 'DetailsActivity.kt' and 'AddEditActivity.kt' defined.
 
 class MainActivity : AppCompatActivity() {
@@ -46,12 +48,12 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        // Setup RecyclerView Adapter and click listener
-        adapter = RestaurantAdapter(restaurantList) { restaurant ->
-            val intent = Intent(this, DetailsActivity:.java)
+        adapter = RestaurantAdapter(restaurantList) { Restaurant ->
+            val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("restaurant", restaurant)
             startActivity(intent)
         }
+
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
